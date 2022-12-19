@@ -1,0 +1,61 @@
+/*
+
+    source file
+
+*/
+
+#include "linkedlist.h"
+
+void main()
+{
+int k,x,op,pos;
+	do{
+		printf("\nMENU \n1.Initialization \n2.Insert \n3.Delete \n4.Display \n5.Size \n6.Addition of polynomial \n7.Subtraction of polynomial \n8.Multiplication of polynomial \n9.Sparse Matrix \n10.exit");
+		printf("\nEnter your Choice:");
+		scanf("%d",&op);
+
+		switch(op)
+		{
+	       case 1:
+	            init();
+	       break;
+
+	       case 2:
+	           printf("Enter the element to be inserted and position:");
+	           scanf("%s %d",&x,&pos);
+	           insert(x,pos);
+	       break;
+
+	       case 3:
+             printf("Enter the position at which element is deleted:");
+	         scanf("%d",&pos);
+	         delete(pos);
+	       break;
+
+           case 4:
+            display();
+           break;
+
+	       case 5:
+             k=size();
+             printf("The size of Linked List is:%d",k);
+	       break;
+           case 6:
+               addition_of_polynomial();
+           break;
+           case 7:
+                subtraction_of_polynomial();
+                break;
+           case 8:
+                multiplication_of_polynomial();
+                break;
+           case 9:
+                Msparse();
+                break;
+           case 10:
+               printf("Exit");
+               break;
+        }
+	}while(op!=10);
+  return 0;
+}
